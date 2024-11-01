@@ -25,9 +25,9 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    {{-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> --}}
 
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
@@ -89,7 +89,7 @@
     <!-- Humberger End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
+    {{-- <header class="header">
         <div class="header__top">
             <div class="container">
                 <div class="row">
@@ -165,7 +165,8 @@
                 <i class="fa fa-bars"></i>
             </div>
         </div>
-    </header>
+    </header> --}}
+    @include('components.header');
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
@@ -695,7 +696,7 @@
     <!-- Blog Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer spad">
+    {{-- <footer class="footer spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -759,7 +760,8 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> --}}
+    @include('components.footer');
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
