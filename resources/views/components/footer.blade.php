@@ -7,9 +7,9 @@
                         <a href="./index.html"><img src="img/logo.png" alt=""></a>
                     </div>
                     <ul>
-                        <li>Address: 60-49 Road 11378 New York</li>
-                        <li>Phone: +65 11.188.888</li>
-                        <li>Email: hello@colorlib.com</li>
+                        <li>Address: 12 Nguyễn Văn Bảo, phường 4, quận Gò Vấp, </li>
+                        <li>Phone: +84 123456789</li>
+                        <li>Email: luckyfood@gmail.com</li>
                     </ul>
                 </div>
             </div>

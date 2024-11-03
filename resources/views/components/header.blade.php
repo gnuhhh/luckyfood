@@ -64,7 +64,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> tdhabcdef1710@gmail.com</li>
+                                <li><i class="fa fa-envelope"></i> luckyfood@gmail.com</li>
                                 <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
@@ -98,14 +98,14 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="{{ route('index') }}"><img src="img/lucky.png" alt="" width="80px" height="80px"></a>
+                        <a href="{{ route('index') }}"><img src="img/lucky.png" alt="" width="80px" height="40px"></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
+                            <li><a href="{{ route('shop-grid') }}">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
