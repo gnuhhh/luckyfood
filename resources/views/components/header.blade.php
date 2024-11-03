@@ -98,7 +98,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="{{ route('index') }}"><img src="img/logo.png" alt=""></a>
+                        <a href="{{ route('index') }}"><img src="img/lucky.png" alt="" width="80px" height="80px"></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
