@@ -417,6 +417,8 @@ ol {
 
 .header__menu {
 	padding: 24px 0;
+	margin-left: 50px;
+	margin-top: 20px;
 }
 
 .header__menu ul li {
@@ -495,6 +497,7 @@ ol {
 .header__cart {
 	text-align: right;
 	padding: 24px 0;
+	margin-top: 20px;
 }
 
 .header__cart ul {
@@ -2650,7 +2653,7 @@ ol {
 }
 
 .footer__widget ul {
-	width: 50%;
+	width: 100%;
 	float: left;
 }
 
@@ -2660,7 +2663,7 @@ ol {
 
 .footer__widget ul li a {
 	color: #1c1c1c;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 32px;
 }
 
@@ -2733,7 +2736,7 @@ ol {
 }
 
 .footer__copyright__text {
-	font-size: 14px;
+	font-size: 16px;
 	color: #1c1c1c;
 	float: left;
 	line-height: 25px;
