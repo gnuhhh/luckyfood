@@ -17,3 +17,11 @@ Route::get('/shopping-cart', function () {
 Route::get('/contact', function () {
     return view(('contact'));
 })->name('contact');
+
+Route::get('/signin', function () {
+    return view(('signin'));
+})->name('signin');
+
+Route::get('/register', function () {
+    return view(('register'));
+})->name('register');

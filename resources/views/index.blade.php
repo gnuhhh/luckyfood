@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lucky Food</title>
+    <title>Trang chủ - LuckyFood</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -42,6 +42,7 @@
                             <li><a href="#">Tráng Miệng</a></li>
                             <li><a href="#">Phần Ăn Trẻ Em</a></li>
                             <li><a href="#">Món Ăn Nhẹ</a></li>
+                            <li><a href="#">Bánh Muffin</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,10 +50,6 @@
                     <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
-                                {{-- <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div> --}}
                                 <input type="text" placeholder="What do yo u need?">
                                 <button type="submit" class="site-btn">SEARCH</button>
                             </form>
@@ -62,7 +59,7 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="hero__search__phone__text">
-                                <h5>+84 123456789</h5>
+                                <h5>1900 0091</h5>
                                 <span>support 24/7 time</span>
                             </div>
                         </div>

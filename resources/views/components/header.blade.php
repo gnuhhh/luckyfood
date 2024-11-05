@@ -87,7 +87,7 @@
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Đăng Nhập</a>
+                                <a href="{{ route('signin') }}"><i class="fa fa-user"></i> Đăng Nhập</a>
                             </div>
                         </div>
                     </div>

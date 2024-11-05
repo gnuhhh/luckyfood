@@ -8,20 +8,19 @@
                     </div>
                     <ul>
                         <li>Địa chỉ: 12 Nguyễn Văn Bảo, phường 4, quận Gò Vấp, Hồ Chí Minh</li>
-                        <li>Số điện thoại: 0987654321</li>
+                        <li>Số điện thoại: 1900 0091</li>
                         <li>Email: contact@luckyfood.com</li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
                 <div class="footer__widget">
-                    <h6>Useful Links</h6>
+                    <h6>Chính sách</h6>
                     <ul>
                         <li><a href="#">Các câu hỏi thường gặp</a></li>
                         <li><a href="#">Điều khoản và điều kiện</a></li>
                         <li><a href="#">Chính sách và quyền riêng tư</a></li>
                     </ul>
-
                 </div>
             </div>
             <div class="col-lg-3 col-md-12">
