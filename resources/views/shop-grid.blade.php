@@ -63,7 +63,7 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="hero__search__phone__text">
-                                <h5>+84 123456789</h5>
+                                <h5>1900 0091</h5>
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
@@ -99,9 +99,9 @@
     <section class="product spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-5">
+                {{-- <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
-                        {{-- <div class="sidebar__item">
+                        <div class="sidebar__item">
                             <h4>Department</h4>
                             <ul>
                                 <li><a href="#">Fresh Meat</a></li>
@@ -115,7 +115,7 @@
                                 <li><a href="#">Papayaya & Crisps</a></li>
                                 <li><a href="#">Oatmeal</a></li>
                             </ul>
-                        </div> --}}
+                        </div>
                         <div class="sidebar__item">
                             <h4>Price</h4>
                             <div class="price-range-wrap">
@@ -265,8 +265,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-9 col-md-7">
+                </div> --}}
+                <div class="col-lg-12 col-md-12">
                     <div class="product__discount">
                         <div class="section-title product__discount__title">
                             <h2>Sale Off</h2>

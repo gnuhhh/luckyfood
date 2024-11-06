@@ -9,7 +9,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->	
@@ -31,9 +31,7 @@
 				</div>
 
 				<form class="login100-form validate-form">
-					<span class="login100-form-title">
-						Đăng nhập
-					</span>
+					<span class="login100-form-title"><b>Đăng nhập</b></span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
