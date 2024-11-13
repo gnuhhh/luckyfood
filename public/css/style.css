@@ -590,7 +590,7 @@ ol {
 }
 
 .hero__categories__all {
-	background: #7fad39;
+	background: #e31837;
 	position: relative;
 	padding: 10px 25px 10px 40px;
 	cursor: pointer;
@@ -1327,8 +1327,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #7fad39;
-	border-color: #7fad39;
+	background: #e31837;
+	border-color: #e31837;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1526,7 +1526,7 @@ ol {
 }
 
 .filter__option span:hover {
-	color: #7fad39;
+	color: #e31837;
 }
 
 .product__item {
@@ -3469,3 +3469,7 @@ ol {
 		font-size: 24px;
 	}
 }
+
+/* Dat tiec */
+
+

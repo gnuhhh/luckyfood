@@ -30,7 +30,8 @@
 					<img src="img/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="{{ route('login') }}" method="post" role="form">
+					@csrf
 					<span class="login100-form-title"><b>Đăng nhập</b></span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -39,10 +40,13 @@
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
+						@if($errors->has('email'))
+							<span class="error-message">{{ $errors->first('email') }}</span>
+						@endif
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Mật khẩu">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>

@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
+// Dang nhap
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -18,14 +21,15 @@ Route::get('/contact', function () {
     return view(('contact'));
 })->name('contact');
 
-Route::get('/signin', function () {
-    return view(('signin'));
-})->name('signin');
-
 Route::get('/register', function () {
     return view(('register'));
 })->name('register');
 
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin');
+Route::get('/party', function () {
+    return view('ordering-party');
+})->name('ordering-party');
+
+Route::get('/signin', [AuthController::class, 'signin'])->name('signin');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/admin', [AuthController::class, 'admin'])->name('admin');
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
