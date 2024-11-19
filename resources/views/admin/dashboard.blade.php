@@ -11,11 +11,11 @@
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="../admin/css/core.css">
-	<link rel="stylesheet" type="text/css" href="../admin/css/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="../admin/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" type="text/css" href="../admin/css/responsive.bootstrap4.min.css">
-	<link rel="stylesheet" type="text/css" href="../admin/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../adminn/css/core.css">
+	<link rel="stylesheet" type="text/css" href="../adminn/css/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../adminn/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../adminn/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../adminn/css/style.css">
 
 </head>
 <body>
@@ -251,16 +251,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- js -->
-	<script src="../admin/js/core.js"></script>
-	<script src="../admin/js/script.min.js"></script>
-	<script src="../admin/js/process.js"></script>
-	<script src="../admin/js/layout-settings.js"></script>
-	<script src="../admin/js/apexcharts.min.js"></script>
-	<script src="../admin/js/jquery.dataTables.min.js"></script>
-	<script src="../admin/js/dataTables.bootstrap4.min.js"></script>
-	<script src="../admin/js/dataTables.responsive.min.js"></script>
-	<script src="../admin/js/responsive.bootstrap4.min.js"></script>
-	<script src="../admin/js/dashboard.js"></script>
+    @include('admin.components.scripts');
 </body>
 </html>
