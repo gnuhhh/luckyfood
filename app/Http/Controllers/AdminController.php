@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+
+    }
     public function index(){
-        // return view('admin.dashboard');
-        echo 1;die();
+        return view('admin.dashboard');
     }
 }

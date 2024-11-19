@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AuthMiddleware;
 
 // Dang nhap
 Route::get('/', function () {
@@ -31,5 +32,6 @@ Route::get('/party', function () {
 
 Route::get('/signin', [AuthController::class, 'signin'])->name('signin');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/admin', [AuthController::class, 'admin'])->name('admin');
-Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard')->middleware(AuthMiddleware::class);
