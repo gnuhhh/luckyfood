@@ -2,11 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Brand;
-use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class ProductSeeder extends Seeder
@@ -16,63 +13,38 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-         // Insert categories
-         DB::table('categories')->insert([
-            ['id' => 1, 'name' => 'Rau củ'],
-            ['id' => 2, 'name' => 'Trái cây'],
-            ['id' => 3, 'name' => 'Thức ăn nhanh'],
-            ['id' => 4, 'name' => 'Đồ gia dụng'],
-            ['id' => 5, 'name' => 'Thịt tươi'],
-            ['id' => 6, 'name' => 'Nước ngọt'],
-            ['id' => 7, 'name' => 'Gia vị'],
-            ['id' => 8, 'name' => 'Thực phẩm sạch'],
-            ['id' => 9, 'name' => 'Thịt đông lạnh'],
-            ['id' => 10, 'name' => 'Đồ uống có cồn']
-        ]);
+        $products = [
+            ['category_id' => '1', 'product_name' => 'Burger Bò phô mai đặc biệt', 'product_sold' => 0, 'product_price' => 56.000, 'product_image' => 'burger1.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger 2 lớp bò, phô mai', 'product_sold' => 0, 'product_price' => 66.000, 'product_image' => 'burger2.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Bò miếng lớn phô mai', 'product_sold' => 0, 'product_price' => 79.000, 'product_image' => 'burger3.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Big mac', 'product_sold' => 0, 'product_price' => 76.000, 'product_image' => 'burger4.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Bò hoàng gia đặc biệt', 'product_sold' => 0, 'product_price' => 89.000, 'product_image' => 'burger5.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Gà phô-mai đặc biệt', 'product_sold' => 0, 'product_price' => 69.000, 'product_image' => 'burger6.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Gà Nhỏ Mayo', 'product_sold' => 0, 'product_price' => 36.000, 'product_image' => 'burger7.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Phi lê Cá phô mai', 'product_sold' => 0, 'product_price' => 56.000, 'product_image' => 'burger8.png', 'product_status' => 0],
+            ['category_id' => '1', 'product_name' => 'Burger Xúc Xích - 337 Kcal', 'product_sold' => 0, 'product_price' => 36.000, 'product_image' => 'burger9.png', 'product_status' => 0],
 
-        // Insert brands
-        DB::table('brands')->insert([
-            ['id' => 1, 'name' => 'Win'],
-            ['id' => 2, 'name' => 'Vissan'],
-            ['id' => 3, 'name' => 'Chinsu'],
-            ['id' => 4, 'name' => 'Meatdeli'],
-        ]);
+            ['category_id' => '2', 'product_name' => '20 miếng Gà Viên Vui Vẻ', 'product_sold' => 0, 'product_price' => 121.000, 'product_image' => 'ck1.png', 'product_status' => 0],
+            ['category_id' => '2', 'product_name' => '6 Miếng Cánh Gà McWings™', 'product_sold' => 0, 'product_price' => 125.000, 'product_image' => 'ck2.png', 'product_status' => 0],
+            ['category_id' => '2', 'product_name' => '3 miếng gà rán', 'product_sold' => 0, 'product_price' => 103.000, 'product_image' => 'ck3.png', 'product_status' => 0],
+            ['category_id' => '2', 'product_name' => 'Phần ăn 2 miếng gà rán', 'product_sold' => 0, 'product_price' => 92.000, 'product_image' => 'ck4.png', 'product_status' => 0],
 
-        $productImage_link = 'img/product/';
-        $arr_image = [];
-        for ($i = 1; $i <= 12; $i++) {
-            array_push($arr_image, $productImage_link . 'product-' . $i . '.jpg');
-        }
+            ['category_id' => '3', 'product_name' => 'Sữa tươi', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'dr1.png', 'product_status' => 0],
+            ['category_id' => '3', 'product_name' => 'Fanta', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'dr2.webp', 'product_status' => 0],
+            ['category_id' => '3', 'product_name' => 'Nước suối', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'dr3.png', 'product_status' => 0],
+            ['category_id' => '3', 'product_name' => 'Coca-Cola', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'dr4.png', 'product_status' => 0],
 
-        for ($i = 1; $i <= 100; $i++) {
-            $category = Category::find(mt_rand(1, 10));
-            $brand = Brand::find(mt_rand(1, 4));
-            
-            // Insert product
-            DB::table('products')->insert([
-                'id' => $i,
-                'name' => $category->name . ' ' . $brand->name . ' ' . mt_rand(100, 999),
-                'description' => 'Sản phẩm '.$category->name . ' ' . $brand->name . ' ' . mt_rand(100, 999) .' chất lượng cao 100%',
-                'longdescription' => 'This is a long description of product ',
-                'price' => (mt_rand(100, 999))*1000,
-                'sale_percent' => Arr::random([0.8,0.9,0.7,1]),
-                'quantity' => Arr::random([0,10,20,30,100,50,60]),
-                'uploaded' => 1,
-                'brand_id' => $brand->id
-            ]);
+            ['category_id' => '4', 'product_name' => 'Kem ốc quế', 'product_sold' => 0, 'product_price' => 10.000, 'product_image' => 'des1.webp', 'product_status' => 0],
+            ['category_id' => '4', 'product_name' => 'Kem Socola', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'des2.webp', 'product_status' => 0],
+            ['category_id' => '4', 'product_name' => 'Kem Dâu', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'des3.webp', 'product_status' => 0],
+            ['category_id' => '4', 'product_name' => 'Kem Xay Bánh Oreo', 'product_sold' => 0, 'product_price' => 22.000, 'product_image' => 'des4.webp', 'product_status' => 0],
 
-            // Insert product image
-            DB::table('product_images')->insert([
-                'product_id' => $i,
-                'url' => Arr::random($arr_image),
-                'image_type' => 0
-            ]);
+            ['category_id' => '5', 'product_name' => 'Khoai Tây Chiên (size nhỏ)', 'product_sold' => 0, 'product_price' => 19.000, 'product_image' => 'ch1.webp', 'product_status' => 0],
 
-            // Insert product category
-            DB::table('product_categories')->insert([
-                'product_id' => $i,
-                'category_id' => $category->id
-            ]);
-        }
+            ['category_id' => '6', 'product_name' => 'Khoai Tây Chiên (size vừa)', 'product_sold' => 0, 'product_price' => 29.000, 'product_image' => 'f1.webp', 'product_status' => 0],
+            ['category_id' => '6', 'product_name' => 'Khoai Tây Chiên (size lớn)', 'product_sold' => 0, 'product_price' => 39.000, 'product_image' => 'f2.webp', 'product_status' => 0],
+            ['category_id' => '6', 'product_name' => 'Salad lắc', 'product_sold' => 0, 'product_price' => 35.000, 'product_image' => 'f3.webp', 'product_status' => 0],
+        ];
+        DB::table('products')->insert($products);
     }
 }
