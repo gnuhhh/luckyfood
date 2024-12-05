@@ -1,4 +1,5 @@
-* text=auto eol=lf
+The environment file is invalid!
+Failed to parse dotenv file. Encountered unexpected whitespace at [ofnu iryp wugh wvzf]* text=auto eol=lf
 
 *.blade.php diff=html
 *.css diff=css
