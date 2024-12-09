@@ -39,7 +39,7 @@
 									</ul>
 								</div>
 							</li> --}}
-							<li class="sidebar-dropdown">
+							{{-- <li class="sidebar-dropdown">
 								<a href="#">
 									<i class="bi bi-envelope-fill"></i>
 									<span class="menu-text">Quản lý Email</span>
@@ -63,7 +63,7 @@
 										</li>
 									</ul>
 								</div>
-							</li>
+							</li> --}}
 							<li class="sidebar-dropdown">
 								<a href="#">
 									<i class="bi bi-handbag"></i>
@@ -89,7 +89,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="sidebar-dropdown">
+							{{-- <li class="sidebar-dropdown">
 								<a href="#">
 									<i class="bi bi-file-text"></i>
 									<span class="menu-text">Bài viết</span>
@@ -104,7 +104,7 @@
 										</li>
 									</ul>
 								</div>
-							</li>
+							</li> --}}
 							<li class="sidebar-dropdown">
 								<a href="#">
 									<i class="bi bi-person-badge"></i>
@@ -137,7 +137,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="sidebar-dropdown">
+							{{-- <li class="sidebar-dropdown">
 								<a href="#">
 									<i class="bi bi-credit-card-2-front-fill"></i>
 									<span class="menu-text">Thanh toán online</span>
@@ -152,7 +152,7 @@
 										</li>
 									</ul>
 								</div>
-							</li>
+							</li> --}}
 						</ul>
 					</div>
 				</div>
