@@ -7,7 +7,7 @@
                 <div class="hero__categories">
                     <div class="hero__categories__all">
                         <i class="fa fa-bars"></i>
-                        <span>All Category</span>
+                        <span>Menu chính</span>
                     </div>
                     <ul>
                         @include('client.category.category_hero')

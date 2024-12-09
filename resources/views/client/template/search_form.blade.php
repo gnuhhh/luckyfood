@@ -4,7 +4,7 @@
             @csrf
             <input class="ajaxSearch" name="key" type="text" placeholder="Nhập sản phẩm tìm kiếm....">
             
-            <button type="submit" class="site-btn">Search</button>
+            <button type="submit" class="site-btn">tìm kiếm</button>
         </form>
         
     </div>

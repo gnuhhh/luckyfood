@@ -18,11 +18,11 @@
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                             </div>
                             <div class="header__top__right__language">
-                                <img src="{{ asset('client/img/language.png') }}" alt="">
-                                <div>English</div>
+                                <img src="{{ asset('client/img/Flag_of_Vietnam.svg.webp') }}" alt="" width="40px" height="20px">
+                                <div>Vietnamese</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul>
-                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">Vietnamese</a></li>
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>
