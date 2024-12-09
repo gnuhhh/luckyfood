@@ -4,7 +4,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__about__logo">
-                        <a href="#"><img src="img/lucky.png" alt="" width="80px" height="80px"></a>
+                        <a href="#"><img src="{{ asset('client/img/luckyy.png') }}" alt="" width="80px" height="80px"></a>
                     </div>
                     <ul>
                         <li>Địa chỉ: 12 Nguyễn Văn Bảo, phường 4, quận Gò Vấp, Hồ Chí Minh</li>

@@ -8,8 +8,18 @@
 
 
 	</head>
-
-	<body class="login-container bg-primary">
+	<style>
+		.login-container{
+			background-color: #e13837; 
+		}
+		.text-ad{
+			color:#e13837;
+		}
+		.icon{
+			background-color: #e13837;
+		}
+	</style>
+	<body class="login-container">
 
 		<!-- Loading wrapper start -->
 		<div id="loading-wrapper">
@@ -39,7 +49,7 @@
 			@endif
 			<div class="login-box">
 				<div class="login-form">
-					<h3 class="text-center text-primary">Đăng nhập Admin</h3>
+					<h3 class="text-center text-ad">Đăng nhập Admin</h3>
 					<div class="mb-3">
 						<label class="form-label">Email</label>
 						<input name='email' type="text" class="form-control" placeholder="Nhập email" >
@@ -56,23 +66,10 @@
                         <span class="text-danger">{{ $message }}</span>
                         @enderror
 					</div>
-					<div class="login-form-actions">
-						<button type="submit" class="btn"> <span class="icon"> <i class="bi bi-arrow-right-circle"></i> </span>
+					<div class="login-form-actions ">
+						<button type="submit" class="btn"> <span class="icon"><i class="bi bi-arrow-right-circle"></i></span>
 							Đăng nhập</button>
 					</div>
-					{{-- <div class="login-form-actions">
-						<button type="submit" class="btn"> <img src="assets/images/google.svg" class="login-icon"
-								alt="Login with Google">
-							Login with Google</button>
-						<button type="submit" class="btn"> <img src="assets/images/facebook.svg" class="login-icon"
-								alt="Login with Facebook">
-							Login with Facebook</button>
-					</div> --}}
-					{{-- <div class="login-form-footer">
-						<div class="additional-link">
-							Nếu bạn chưa có tài khoản ? <a href="{{ route('register') }}">Đăng ký</a>
-						</div>
-					</div> --}}
 				</div>
 			</div>
 		</form>

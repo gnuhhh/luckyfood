@@ -119,12 +119,12 @@ Route::prefix($admin_prefix)->middleware('authAdmin')->group(function () use ($a
     $prefix = 'material';
     $controller = MaterialController::class;
     Route::prefix($prefix)->group(function () use ($controller, $prefix) {
-        Route::get('/', [$controller, 'index'])->middleware('checkpermission:show-' . $prefix)->name($prefix);
-        Route::get('/create', [$controller, 'create'])->middleware('checkpermission:create-' . $prefix)->name($prefix . '.create');
+        Route::get('/', [$controller, 'index'])->name($prefix);
+        Route::get('/create', [$controller, 'create'])->name($prefix . '.create');
         Route::post('/store', [$controller, 'store'])->name($prefix . '.store');
-        Route::get('/edit/{id}', [$controller, 'edit'])->middleware('checkpermission:update-' . $prefix)->name($prefix . '.edit');
+        Route::get('/edit/{id}', [$controller, 'edit'])->name($prefix . '.edit');
         Route::post('/update/{id}', [$controller, 'update'])->name($prefix . '.update');
-        Route::get('/delete/{id}', [$controller, 'delete'])->middleware('checkpermission:delete-' . $prefix)->name($prefix . '.delete');
+        Route::get('/delete/{id}', [$controller, 'delete'])->name($prefix . '.delete');
     });
     //===========================PRODUCT=====================
     $prefix = 'product';

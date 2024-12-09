@@ -1,5 +1,5 @@
 @php
-    $object='material';
+    $object='category';
     $object_title='nguyên liệu';
 @endphp
 @extends('admin.layout.master')
@@ -24,11 +24,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
-<form action="{{ route('material.store') }}" enctype="multipart/form-data" method="post">
+<form action="{{ route('material.update', $material->id) }}" enctype="multipart/form-data" method="post">
     @csrf
     <div class="col-sm-12 col-12">
         <div class="card-border">
-            <div class="card-border-title">Thêm {{ $object_title }}</div>
+            <div class="card-border-title">Cập nhật {{ $object_title }}</div>
             <div class="card-border-body">
 
     
@@ -36,7 +36,7 @@
                     <div class="col-sm-6 col-12">
                         <div class="mb-3">
                             <label class="form-label">Tên <span class="text-red">*</span></label>
-                            <input name="name" type="text" class="form-control" placeholder="Nhập tên {{ $object_title }}" autocomplete="off">
+                            <input name="name" type="text" class="form-control" placeholder="Nhập tên {{ $object_title }}" autocomplete="off" value="{{ $material->name }}">
                             @error('name')
                             <span class="text-danger"></span>
                             @enderror
@@ -46,15 +46,15 @@
                         <div class="mb-3">
                             <label class="form-label">Tình trạng {{ $object_title }}<span class="text-red">*</span></label>
                             <select class="form-control" name="status"  placeholder="Chọn {{ ucfirst($object_title) }} cha">
-                                <option value="0">Còn</option>
-                                <option value="1">Không còn</option>
+                                <option {{ $material->status==0?'selected':'' }} value="{{ $material->status }}">Còn</option>
+                                <option {{ $material->status==1?'selected':'' }} value="{{ $material->status }}">Không còn</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-12 col-12">
                         <div class="mb-3">
                             <label class="form-label">Số lượng <span class="text-red">*</span></label>
-                            <input name="qty" type="text" class="form-control" placeholder="Nhập tên {{ $object_title }}" autocomplete="off">
+                            <input name="qty" type="text" class="form-control" placeholder="Nhập tên {{ $object_title }}" autocomplete="off" value="{{ $material->quantity }}">
                             @error('name')
                             <span class="text-danger"></span>
                             @enderror
@@ -74,10 +74,11 @@
     </div>
     <div class="col-sm-12 col-12">
         <div class="custom-btn-group flex-end">
-            <button type="submit" class="btn btn-success">Thêm</button>
+            <button type="submit" class="btn btn-success">Cập nhật</button>
         </div>
     </div>
 
 </form>
 
 @endsection
+

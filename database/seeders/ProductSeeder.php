@@ -49,11 +49,8 @@ class ProductSeeder extends Seeder
                 'id' => $i,
                 'name' => $category->name . ' ' . $brand->name,
                 'description' => 'Sản phẩm '.$category->name . ' ' . $brand->name.' chất lượng cao 100%',
-                'longdescription' => 'This is a long description of product ',
                 'price' => (mt_rand(10, 99))*1000,
-                'sale_percent' => Arr::random([0.8,0.9,0.7,1]),
                 'quantity' => Arr::random([10,20,30,100,50,60]),
-                'uploaded' => 1,
                 'brand_id' => $brand->id
             ]);
 
@@ -68,6 +65,39 @@ class ProductSeeder extends Seeder
             DB::table('product_categories')->insert([
                 'product_id' => $i,
                 'category_id' => $category->id
+            ]);
+        }
+        
+        $ingredients = [
+            'Thịt bò xay',
+            'Thịt gà phi lê',
+            'Xúc xích',
+            'Phô mai Cheddar',
+            'Phô mai Mozzarella',
+            'Bánh mì burger',
+            'Bánh tortilla',
+            'Khoai tây',
+            'Rau xà lách',
+            'Cà chua',
+            'Hành tây',
+            'Dưa chuột muối',
+            'Ớt chuông',
+            'Ngô ngọt',
+            'Bột chiên giòn',
+            'Bột mỳ',
+            'Sốt cà chua',
+            'Sốt mayonnaise',
+            'Dầu ăn',
+            'Tỏi băm'
+        ];
+
+        foreach ($ingredients as $ingredient) {
+            $quantity = rand(0, 30);
+            $status = $quantity == 0 ? 1 : 0; 
+            DB::table('materials')->insert([
+                'name' => $ingredient,
+                'quantity' => $quantity,
+                'status' => $status
             ]);
         }
     }
