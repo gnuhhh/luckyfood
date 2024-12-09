@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerr {
+    position: relative; /* Positioning the container for overlay */
+    background-image: url("/img/background.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+}
+
+.containerr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(181, 176, 176, 0.801); /* Adjust the color and opacity for the overlay */
+    z-index: 1; /* Places the overlay above the background image */
+}
+
+/* Content inside the container should appear above the overlay */
+.containerr > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.header {
+    background-color: rgb(7, 8, 36);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.header .logo {
+    display: flex; /* Sử dụng Flexbox để sắp xếp ảnh và chữ theo hàng ngang */
+    align-items: center; /* Canh giữa ảnh và chữ theo chiều dọc */
+}
+
+.header .logo img {
+    margin-right: 10px; /* Tạo khoảng cách giữa ảnh và chữ */
+    width: 50px; /* Điều chỉnh kích thước ảnh theo ý muốn */
+    height: auto; /* Giữ nguyên tỷ lệ ảnh */
+}
+
+
+.header .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header .user {
+    font-size: 14px;
+}
+
+.main {
+    margin-left: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    align-items: flex-start;
+    flex: 1; /* Allows the main section to take up remaining space */
+}
+.content {
+    display: flex; /* Sử dụng Flexbox để sắp xếp ảnh và chữ theo hàng ngang */
+    align-items: center;
+}
+
+.content img {
+    width: 650px; /* Tăng chiều ngang của ảnh */
+    height: 400px;
+    border-radius: 80px;
+    object-fit: cover;
+    margin-left: 300px;
+}
+
+.form {
+    background-color: #736b71;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 270px;
+    border-radius: 8px;
+}
+
+.form .dropdown, .form .calendar {
+    background-color: #333;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.img {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; /* Centers content vertically */
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer div {
+    flex: 1; /* Ensures each section takes up equal space */
+    min-width: 200px; /* Prevents sections from getting too narrow on small screens */
+}
+
+.footer ul1 ul2 {
+    list-style: none; /* Removes bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul1 li {
+    margin: 5px 0; /* Adds spacing between list items */
+    text-align: left;
+    list-style: none;
+}
+
+.footer ul2 li {
+    margin-left: 160px; /* Adds spacing between list items */
+    text-align: left;
+    list-style: none;
+}
+.footer img {
+    margin-top: 10px;
+    width: 50px;
+}
+
+.form button{
+    width: 95%;
+}
+
+.company-info img {
+    width: 86px; /* Chiều rộng bức ảnh */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    display: block; /* Đảm bảo ảnh không bị ảnh hưởng bởi khoảng trắng xung quanh */
+    margin: 0 auto; /* Canh giữa bức ảnh */
+}
+
+#dynamicContent {
+    display: none; /* Ẩn khung mặc định */
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

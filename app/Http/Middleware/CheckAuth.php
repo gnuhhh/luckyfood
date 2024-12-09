@@ -2,10 +2,11 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
 class CheckAuth
 {
@@ -14,14 +15,18 @@ class CheckAuth
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, $guard = null): Response
+    public function handle(Request $request, Closure $next): Response
     {
-        if(!Auth::guard($guard)->check()){
-            if($guard == 'admin'){
-                return redirect()->route('admin');
-            }else{
-            }
+        if (!auth()->check()) {
+            return redirect()->route('loginadmin');
         }
-        return $next($request);
+        $groupRole = User::find(auth()->id())->roles()->select('roles.group')->pluck('group');
+        if(!$groupRole->contains('system')){
+            Auth::logout();
+            $request->session()->invalidate();
+           return redirect()->route('404');
+        }else{
+          return $next($request);  
+        }
     }
 }
