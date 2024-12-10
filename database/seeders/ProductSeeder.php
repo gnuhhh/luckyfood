@@ -49,8 +49,11 @@ class ProductSeeder extends Seeder
                 'id' => $i,
                 'name' => $category->name . ' ' . $brand->name,
                 'description' => 'Sản phẩm '.$category->name . ' ' . $brand->name.' chất lượng cao 100%',
+                'longdescription' => 'This is a long description of product ',
                 'price' => (mt_rand(10, 99))*1000,
+                'sale_percent' => Arr::random([0.8,0.9,0.7,1]),
                 'quantity' => Arr::random([10,20,30,100,50,60]),
+                'uploaded' => 1,
                 'brand_id' => $brand->id
             ]);
 

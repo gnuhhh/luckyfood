@@ -7,7 +7,6 @@
 </head>
 
 <body>
-    @include('client.template.preloader')
     @include('client.template.humberger')
     @include('client.template.header')
     @include('client.template.hero')

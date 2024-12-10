@@ -79,9 +79,9 @@
                                     <td>
                                         {{ $product->brand->name }}
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         {{ ($product->uploaded==1)?'Đã đăng':'Chưa đăng' }}
-                                    </td>
+                                    </td> --}}
                                     
                                     <td>
                                         <div class="d-flex justify-content-end">

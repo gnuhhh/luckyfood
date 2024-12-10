@@ -7,9 +7,6 @@
                             <div class="product__discount__item__pic set-bg" data-setbg="{{ asset($image->url) }}">  
                         @endif
             @endforeach
-            @if($product->sale_percent!=1)
-            <div class="product__discount__percent">-{{ 100-$product->sale_percent*100 }}%</div>
-            @endif
                 <ul class="product__item__pic__hover"> 
                     <form method="POST">
                        

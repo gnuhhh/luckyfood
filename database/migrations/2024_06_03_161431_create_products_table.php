@@ -15,10 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
+            $table->text('longdescription')->nullable();
+            $table->float('sale_percent')->nullable();
             $table->float('price');
             $table->integer('quantity');
+            $table->unsignedBigInteger('brand_id')->nullable();
+            $table->integer('uploaded')->default(0);
             $table->timestamps();
-            $table->foreignId('brand_id')->references('id')->on('brands')->onDelete('cascade');
+            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
             $table->softDeletes();
         });
     }

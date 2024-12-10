@@ -42,15 +42,6 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="col-sm-6 col-12">
-                        <div class="mb-3">
-                            <label class="form-label">{{ ucfirst($object_title) }} cha<span class="text-red">*</span></label>
-                            <select class="form-control" name="parent_id"  placeholder="Chọn {{ ucfirst($object_title) }} cha">
-                                <option value="0">Danh mục cha</option>
-                                {!! $option !!}
-                            </select>
-                        </div>
-                    </div>
                     <div class="col-sm-12 col-12">
                         <div class="mb-0">
                             <label class="form-label">Chọn ảnh {{ ucfirst($object_title) }}</label>

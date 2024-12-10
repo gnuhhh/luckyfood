@@ -159,7 +159,7 @@ class CategoryController extends Controller
     {
         try{
             $category = Category::find($id);
-            unlink($category->image);
+            // unlink($category->image);
             $category->delete();
             return redirect()->back()->with('success','Đã xóa thành công');
         }catch (\Exception $e) {
